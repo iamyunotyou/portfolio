@@ -5,13 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Animal SoundBoard</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Animal SoundBoard</h1>
+    <h1 class="title">Animal SoundBoard</h1>
     <div class="keys">
     <div data-key="65" class="key">
-        <kbd>A</kbd>
-        <span class="sound">Pig</span>
+        <button>A</button>
+        <span class="sound"> Press A to hear a pig sound</span>
     </div>
     </div>
 
@@ -37,8 +38,6 @@
         if (e.propertyName !== 'transform') return;
         e.target.classList.remove('playing');
     }
-
-
 
 
 </script>
