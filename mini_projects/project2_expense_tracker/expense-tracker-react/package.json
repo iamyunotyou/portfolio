@@ -1,5 +1,5 @@
 {
-  "homepage": "http://iamyunotyou.github.io/mini_projects/project2_expense_tracker/expense-tracker-react"
+  "homepage": "http://iamyunotyou.github.io/mini_projects/project2_expense_tracker/expense-tracker-react",
   "name": "expense-tracker-react",
   "version": "0.1.0",
   "private": true,
@@ -18,7 +18,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
