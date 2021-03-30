@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/mini_projects/project2_expense_tracker/expense-tracker-react/static/css/main.b7701313.chunk.css",
+    "main.js": "/mini_projects/project2_expense_tracker/expense-tracker-react/static/js/main.cbfcfdb6.chunk.js",
+    "main.js.map": "/mini_projects/project2_expense_tracker/expense-tracker-react/static/js/main.cbfcfdb6.chunk.js.map",
+    "runtime-main.js": "/mini_projects/project2_expense_tracker/expense-tracker-react/static/js/runtime-main.45ddf966.js",
+    "runtime-main.js.map": "/mini_projects/project2_expense_tracker/expense-tracker-react/static/js/runtime-main.45ddf966.js.map",
+    "static/js/2.7123c120.chunk.js": "/mini_projects/project2_expense_tracker/expense-tracker-react/static/js/2.7123c120.chunk.js",
+    "static/js/2.7123c120.chunk.js.map": "/mini_projects/project2_expense_tracker/expense-tracker-react/static/js/2.7123c120.chunk.js.map",
+    "index.html": "/mini_projects/project2_expense_tracker/expense-tracker-react/index.html",
+    "static/css/main.b7701313.chunk.css.map": "/mini_projects/project2_expense_tracker/expense-tracker-react/static/css/main.b7701313.chunk.css.map",
+    "static/js/2.7123c120.chunk.js.LICENSE.txt": "/mini_projects/project2_expense_tracker/expense-tracker-react/static/js/2.7123c120.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.45ddf966.js",
+    "static/js/2.7123c120.chunk.js",
+    "static/css/main.b7701313.chunk.css",
+    "static/js/main.cbfcfdb6.chunk.js"
+  ]
+}
