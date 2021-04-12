@@ -9,13 +9,21 @@ class App extends React.Component {
     return new Date().toLocaleDateString();
   }
 
-  window.navigator.geolocation.getCurrentPosition(
-    (position) => console.log(position),
-    (err) => console.log(err);
-  )
+  // componentDidMount(
+  //   window.navigator.geolocation.getCurrentPosition(
+  //     (position) => console.log(position),
+  //     (err) => console.log(err),
+  //   )
+  // )
+
 
 
   render() {
+    window.navigator.geolocation.getCurrentPosition(
+      (position) => console.log(position),
+      (err) => console.log(err),
+    )
+
     return (
     <div htmlFor="search">
       <label className="search" htmlFor="username">유저 이름을 입력하세요: </label>
