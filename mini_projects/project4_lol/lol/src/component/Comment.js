@@ -1,5 +1,6 @@
 import React from 'react';
 import faker from 'faker';
+import Vote from './Vote';
 
 const Comment = (props) => {
     return (
@@ -17,6 +18,7 @@ const Comment = (props) => {
                     </div>
                     <div className="text">{props.text}</div>
                 </div>
+                <Vote />
             </div>
         </div>
     )

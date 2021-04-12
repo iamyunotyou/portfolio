@@ -1,6 +1,6 @@
 import React from 'react';
 import Comment from './component/Comment';
-
+import Vote from './component/Vote';
 
 class App extends React.Component { 
 
