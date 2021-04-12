@@ -3,12 +3,16 @@ import Comment from './component/Comment';
 import Vote from './component/Vote';
 
 class App extends React.Component { 
-
   state = { time: null };
 
   getTime() {
     return new Date().toLocaleDateString();
   }
+
+  window.navigator.geolocation.getCurrentPosition(
+    (position) => console.log(position),
+    (err) => console.log(err);
+  )
 
 
   render() {
