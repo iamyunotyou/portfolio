@@ -3,10 +3,13 @@ import Comment from './component/Comment';
 import Vote from './component/Vote';
 
 class App extends React.Component { 
-  state = { time: null };
+
+  state = { time: null, longitude: null, latitude: null , gps_error: '' }
 
   getTime() {
-    return new Date().toLocaleDateString();
+    let now_time_hour = new Date().getHours().toString();
+    let now_time_min = new Date().getMinutes().toString();
+    return now_time_hour + ": " + now_time_min;
   }
 
   // componentDidMount(
@@ -16,14 +19,18 @@ class App extends React.Component {
   //   )
   // )
 
+ componentDidMount() {
+  window.navigator.geolocation.getCurrentPosition(
+    (position) => this.setState({ longitude : position.coords.longitude, latitude: position.coords.latitude }),
+    (err) => this.setState({gps_error : err.message}),
+  )
+ }
 
+ componentDidUpdate() {
+
+ }
 
   render() {
-    window.navigator.geolocation.getCurrentPosition(
-      (position) => console.log(position),
-      (err) => console.log(err),
-    )
-
     return (
     <div htmlFor="search">
       <label className="search" htmlFor="username">유저 이름을 입력하세요: </label>
@@ -34,6 +41,16 @@ class App extends React.Component {
       <Comment author='Peter' timeAgo="오늘 4:00 PM" text='오버워치'/>
       <Comment author='Jeff' timeAgo="오늘 3:00 PM" text='맥북 사주세요'/>
       <Comment author='Sam' timeAgo="오늘 2:00 PM" text='리그 오브 레전드'/>
+      {/* if (this.state.gps_error && !this.state.lat) {
+        return <div> Error: {this.state.gps_error} </div>
+      }
+      if (!this.state.gps_error && this.state.lat) {
+        return <div>Latitude: {this.state.lat}</div>
+      } 
+      return <div>Loading</div>; */}
+      <p>지금 시간은 {this.getTime()}입니다. 미성년자는 집에 가세요. </p>
+      <p>Location : 당신의 좌표는 {this.state.longitude}, {this.state.latitude} 입니다. 주위에 롤을 하는 유저는 10명입니다.</p>
+      <p>Error: {this.state.errorMessage}</p>
     </div>
   )
 }
