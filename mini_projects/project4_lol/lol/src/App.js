@@ -1,10 +1,11 @@
 import React from 'react';
 import Comment from './component/Comment';
 import Vote from './component/Vote';
+import UnderageKick from './component/UnderageKick';
 
 class App extends React.Component { 
 
-  state = { time: null, longitude: null, latitude: null , gps_error: '' }
+  state = { time: null, longitude: null, latitude: null , gps_error: '', age: null }
 
   getTime() {
     let now_time_hour = new Date().getHours().toString();
@@ -12,6 +13,10 @@ class App extends React.Component {
     return now_time_hour + ": " + now_time_min;
   }
 
+  getAge() {
+    const enteredAge = prompt('나이?');
+    this.setState( { age: enteredAge })
+  }
   // componentDidMount(
   //   window.navigator.geolocation.getCurrentPosition(
   //     (position) => console.log(position),
@@ -48,9 +53,11 @@ class App extends React.Component {
         return <div>Latitude: {this.state.lat}</div>
       } 
       return <div>Loading</div>; */}
-      <p>지금 시간은 {this.getTime()}입니다. 미성년자는 집에 가세요. </p>
+      <p>지금 시간은 {this.getTime()}입니다. 10시 이후라면 미성년자는 집에 가세요. </p>
       <p>Location : 당신의 좌표는 {this.state.longitude}, {this.state.latitude} 입니다. 주위에 롤을 하는 유저는 10명입니다.</p>
       <p>Error: {this.state.errorMessage}</p>
+      <input type="text" onChange={this.getAge} />
+      <UnderageKick age={this.state.age}>나이</UnderageKick>
     </div>
   )
 }
